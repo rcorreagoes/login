@@ -23,6 +23,7 @@ export class AuthController {
     }
 
     @Post()
+    @ApiOkResponse({ description: 'Login'})
     async login(@Body() user: AuthDto): Promise<any>{
         return await this.authService.login(user).then(async result=>{     
             if(result.email){          

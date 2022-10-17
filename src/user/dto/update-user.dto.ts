@@ -23,7 +23,9 @@ export class UpdateUserPasswordDto{
     password: string
 }
 
-export class UpdateUserStatusDto extends UpdateUserIdDto{
+export class UpdateUserStatusDto{
+    id: number
+    
     @IsString()
     status: string
 }
